@@ -1,0 +1,33 @@
+# Problem Description
+
+Write a Python function `unique_digits(x)` to solve the following problem:
+Given a list of positive integers x. return a sorted list of all
+elements that hasn't any even digit.
+Note: Returned list should be sorted in increasing order.
+For example:
+>>> unique_digits([15, 33, 1422, 1])
+[1, 15, 33]
+>>> unique_digits([152, 323, 1422, 10])
+[]
+
+# Prompt
+
+
+def unique_digits(x):
+    """Given a list of positive integers x. return a sorted list of all 
+    elements that hasn't any even digit.
+
+    Note: Returned list should be sorted in increasing order.
+    
+    For example:
+    >>> unique_digits([15, 33, 1422, 1])
+    [1, 15, 33]
+    >>> unique_digits([152, 323, 1422, 10])
+    []
+    """
+
+
+# Instructions
+
+Please write your solution in the file `solution/solution.py`.
+Ensure your code is self-contained and compiles/runs correctly.

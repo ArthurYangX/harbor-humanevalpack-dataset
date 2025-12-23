@@ -1,0 +1,38 @@
+package main
+
+import (
+    "testing"
+    "github.com/stretchr/testify/assert"
+)
+
+
+// Prompt
+// The Brazilian factorial is defined as:
+// brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!
+// where n > 0
+// 
+// For example:
+// >>> SpecialFactorial(4)
+// 288
+// 
+// The function will receive an integer as input and should return the special
+// factorial of this integer.
+func SpecialFactorial(n int) int {
+// Solution
+fact_i := 1
+    special_fact := 1
+    for i := 1; i <= n; i++ {
+        fact_i *= i
+        special_fact *= fact_i
+    }
+    return special_fact
+}
+
+// Test Code
+func TestSpecialFactorial(t *testing.T) {
+    assert := assert.New(t)
+    assert.Equal(288, SpecialFactorial(4))
+    assert.Equal(34560, SpecialFactorial(5))
+    assert.Equal(125411328000, SpecialFactorial(7))
+    assert.Equal(1, SpecialFactorial(1))
+}

@@ -1,0 +1,45 @@
+# Problem Description
+
+Write a Java function `public List<String> bf(String planet1, String planet2)` to solve the following problem:
+There are eight planets in our solar system: the closerst to the Sun
+is Mercury, the next one is Venus, then Earth, Mars, Jupiter, Saturn,
+Uranus, Neptune.
+Write a function that takes two planet names as strings planet1 and planet2.
+The function should return a tuple containing all planets whose orbits are
+located between the orbit of planet1 and the orbit of planet2, sorted by
+the proximity to the sun.
+The function should return an empty tuple if planet1 or planet2
+are not correct planet names.
+Examples
+bf("Jupiter", "Neptune") ==> ["Saturn", "Uranus"]
+bf("Earth", "Mercury") ==> ["Venus"]
+bf("Mercury", "Uranus") ==> ["Venus", "Earth", "Mars", "Jupiter", "Saturn"]
+
+# Prompt
+
+import java.util.*;
+import java.lang.*;
+
+class Solution {
+    /**
+    There are eight planets in our solar system: the closerst to the Sun
+    is Mercury, the next one is Venus, then Earth, Mars, Jupiter, Saturn,
+    Uranus, Neptune.
+    Write a function that takes two planet names as strings planet1 and planet2.
+    The function should return a tuple containing all planets whose orbits are
+    located between the orbit of planet1 and the orbit of planet2, sorted by
+    the proximity to the sun.
+    The function should return an empty tuple if planet1 or planet2
+    are not correct planet names.
+    Examples
+    bf("Jupiter", "Neptune") ==> ["Saturn", "Uranus"]
+    bf("Earth", "Mercury") ==> ["Venus"]
+    bf("Mercury", "Uranus") ==> ["Venus", "Earth", "Mars", "Jupiter", "Saturn"]
+     */
+    public List<String> bf(String planet1, String planet2) {
+
+
+# Instructions
+
+Please write your solution in the file `solution/solution.py`.
+Ensure your code is self-contained and compiles/runs correctly.
