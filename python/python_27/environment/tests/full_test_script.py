@@ -1,0 +1,29 @@
+from typing import List, Dict, Tuple, Optional, Any, Union
+import math
+
+
+
+def flip_case(string: str) -> str:
+    """ For a given string, flip lowercase characters to uppercase and uppercase to lowercase.
+    >>> flip_case('Hello')
+    'hELLO'
+    """
+
+    return string.swapcase()
+
+
+
+
+
+
+
+def check(flip_case):
+    assert flip_case('') == ''
+    assert flip_case('Hello!') == 'hELLO!'
+    assert flip_case('These violent delights have violent ends') == 'tHESE VIOLENT DELIGHTS HAVE VIOLENT ENDS'
+
+check(flip_case)
+
+# Execution Trigger
+if __name__ == '__main__':
+    check(flip_case)

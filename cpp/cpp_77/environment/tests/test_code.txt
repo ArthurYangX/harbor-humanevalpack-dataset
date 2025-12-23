@@ -1,0 +1,12 @@
+#undef NDEBUG
+#include<assert.h>
+int main(){
+    assert (iscube(1) == true);
+    assert (iscube(2) == false);
+    assert (iscube(-1) == true);
+    assert (iscube(64) == true);
+    assert (iscube(180) == false);
+    assert (iscube(1000) == true);
+    assert (iscube(0) == true);
+    assert (iscube(1729) == false);
+}

@@ -1,0 +1,33 @@
+# Problem Description
+
+Write a Java function `public boolean monotonic(List<Integer> l)` to solve the following problem:
+Return True is list elements are monotonically increasing or decreasing.
+>>> monotonic(Arrays.asList(1, 2, 4, 20))
+true
+>>> monotonic(Arrays.asList(1, 20, 4, 10))
+false
+>>> monotonic(Arrays.asList(4, 1, 0, -10))
+true
+
+# Prompt
+
+import java.util.*;
+import java.lang.*;
+
+class Solution {
+    /**
+    Return True is list elements are monotonically increasing or decreasing.
+    >>> monotonic(Arrays.asList(1, 2, 4, 20))
+    true
+    >>> monotonic(Arrays.asList(1, 20, 4, 10))
+    false
+    >>> monotonic(Arrays.asList(4, 1, 0, -10))
+    true
+     */
+    public boolean monotonic(List<Integer> l) {
+
+
+# Instructions
+
+Please write your solution in the file `solution/solution.py`.
+Ensure your code is self-contained and compiles/runs correctly.
