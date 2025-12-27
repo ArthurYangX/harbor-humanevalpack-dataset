@@ -1,0 +1,42 @@
+# Context
+
+```python
+def monotonic(l: list):
+    """Return True is list elements are monotonically increasing or decreasing.
+    >>> monotonic([1, 2, 4, 20])
+    True
+    >>> monotonic([1, 20, 4, 10])
+    False
+    >>> monotonic([4, 1, 0, -10])
+    True
+    """
+    if l == sorted(l) or l == sorted(l, reverse=True):
+        return False
+    return True
+```
+
+# Instruction
+
+Fix bugs in monotonic.
+
+# Prompt
+
+
+
+def monotonic(l: list):
+    """Return True is list elements are monotonically increasing or decreasing.
+    >>> monotonic([1, 2, 4, 20])
+    True
+    >>> monotonic([1, 20, 4, 10])
+    False
+    >>> monotonic([4, 1, 0, -10])
+    True
+    """
+
+
+# Instructions
+
+Implement your solution in `solution/solution.py`.
+Ensure your submission is self-contained and compiles/runs correctly.
+
+```

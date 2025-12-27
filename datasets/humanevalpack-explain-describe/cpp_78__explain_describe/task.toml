@@ -1,0 +1,19 @@
+version = "1.0"
+
+[metadata]
+name = "cpp_78__explain_describe"
+original_id = "CPP/78"
+difficulty = "medium"
+category = "code_explain"
+tags = ["humanevalpack", "cpp", "explain", "describe"]
+
+[verifier]
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 300.0
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 4096

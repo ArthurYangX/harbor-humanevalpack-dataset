@@ -1,0 +1,58 @@
+# Context
+
+You are given a reference implementation (canonical solution) to explain.
+
+```python
+def is_nested(string):
+    opening_bracket_index = []
+    closing_bracket_index = []
+    for i in range(len(string)):
+        if string[i] == '[':
+            opening_bracket_index.append(i)
+        else:
+            closing_bracket_index.append(i)
+    closing_bracket_index.reverse()
+    cnt = 0
+    i = 0
+    l = len(closing_bracket_index)
+    for idx in opening_bracket_index:
+        if i < l and idx < closing_bracket_index[i]:
+            cnt += 1
+            i += 1
+    return cnt >= 2
+```
+
+# Instruction
+
+Explain the algorithm in natural language:
+- Describe the core idea and step-by-step approach
+- Specify inputs/outputs and edge cases
+- Provide time/space complexity
+
+Constraints:
+- Output must be plain text only
+- Do NOT output any code
+- Write your explanation to `solution/explanation.txt`
+
+# Prompt
+
+
+def is_nested(string):
+    '''
+    Create a function that takes a string as input which contains only square brackets.
+    The function should return True if and only if there is a valid subsequence of brackets 
+    where at least one bracket in the subsequence is nested.
+
+    is_nested('[[]]') ➞ True
+    is_nested('[]]]]]]][[[[[]') ➞ False
+    is_nested('[][]') ➞ False
+    is_nested('[]') ➞ False
+    is_nested('[[][]]') ➞ True
+    is_nested('[[]][[') ➞ True
+    '''
+
+
+# Instructions
+
+- Write the explanation to `solution/explanation.txt`.
+- Do not modify tests.

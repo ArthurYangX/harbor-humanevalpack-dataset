@@ -1,0 +1,67 @@
+# Context
+
+You are given a reference implementation (canonical solution) to explain.
+
+```cpp
+/*
+Create a function that returns true if the last character
+of a given string is an alphabetical character and is not
+a part of a word, and false otherwise.
+Note: "word" is a group of characters separated by space.
+
+Examples:
+check_if_last_char_is_a_letter("apple pie") ➞ false
+check_if_last_char_is_a_letter("apple pi e") ➞ true
+check_if_last_char_is_a_letter("apple pi e ") ➞ false
+check_if_last_char_is_a_letter("") ➞ false 
+*/
+#include<stdio.h>
+#include<string>
+using namespace std;
+bool check_if_last_char_is_a_letter(string txt){
+    if (txt.length()==0) return false;
+    char chr=txt[txt.length()-1];
+    if (chr<65 or (chr>90 and chr<97) or chr>122) return false;
+    if (txt.length()==1) return true;
+    chr=txt[txt.length()-2];
+    if ((chr>=65 and chr<=90) or (chr>=97 and chr<=122)) return false;
+    return true;
+}
+```
+
+# Instruction
+
+Explain the algorithm in natural language:
+- Describe the core idea and step-by-step approach
+- Specify inputs/outputs and edge cases
+- Provide time/space complexity
+
+Constraints:
+- Output must be plain text only
+- Do NOT output any code
+- Write your explanation to `solution/explanation.txt`
+
+# Prompt
+
+/*
+Create a function that returns true if the last character
+of a given string is an alphabetical character and is not
+a part of a word, and false otherwise.
+Note: "word" is a group of characters separated by space.
+
+Examples:
+check_if_last_char_is_a_letter("apple pie") ➞ false
+check_if_last_char_is_a_letter("apple pi e") ➞ true
+check_if_last_char_is_a_letter("apple pi e ") ➞ false
+check_if_last_char_is_a_letter("") ➞ false 
+*/
+#include<stdio.h>
+#include<string>
+using namespace std;
+bool check_if_last_char_is_a_letter(string txt){
+
+
+# Instructions
+
+- Write the explanation to `solution/explanation.txt`.
+- Do not modify tests.

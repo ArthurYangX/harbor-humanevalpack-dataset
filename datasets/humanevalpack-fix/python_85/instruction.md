@@ -1,0 +1,35 @@
+# Context
+
+```python
+def add(lst):
+    """Given a non-empty list of integers lst. add the even elements that are at odd indices..
+
+
+    Examples:
+        add([4, 2, 6, 7]) ==> 2 
+    """
+    return sum([lst[i] for i in range(1, len(lst), 1) if lst[i]%2 == 0])
+```
+
+# Instruction
+
+Fix bugs in add.
+
+# Prompt
+
+
+def add(lst):
+    """Given a non-empty list of integers lst. add the even elements that are at odd indices..
+
+
+    Examples:
+        add([4, 2, 6, 7]) ==> 2 
+    """
+
+
+# Instructions
+
+Implement your solution in `solution/solution.py`.
+Ensure your submission is self-contained and compiles/runs correctly.
+
+```

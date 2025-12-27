@@ -1,0 +1,33 @@
+# Context
+
+You are given a natural-language explanation of a function.
+
+Placeholder explanation for oracle/dataset generation. Implement the function described by the unit tests and the prompt.
+
+# Instruction
+
+Write a correct implementation in cpp that matches the explanation and passes the unit tests.
+
+# Prompt
+
+/*
+Out of vector of strings, return the longest one. Return the first one in case of multiple
+strings of the same length. Return None in case the input vector is empty.
+>>> longest({})
+
+>>> longest({"a", "b", "c"})
+"a"
+>>> longest({"a", "bb", "ccc"})
+"ccc"
+*/
+#include<stdio.h>
+#include<vector>
+#include<string>
+using namespace std;
+string longest(vector<string> strings){
+
+
+# Instructions
+
+Please write your solution in the file `solution/solution.cpp`.
+Ensure your code is self-contained and runs correctly.

@@ -1,0 +1,56 @@
+# Context
+
+You are given a reference implementation (canonical solution) to explain.
+
+```js
+/* Input to this function is a string representing musical notes in a special ASCII format.
+  Your task is to parse this string and return list of integers corresponding to how many beats does each
+  not last.
+
+  Here is a legend:
+  'o' - whole note, lasts four beats
+  'o|' - half note, lasts two beats
+  '.|' - quater note, lasts one beat
+
+  >>> parseMusic('o o| .| o| o| .| .| .| .| o o')
+  [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]
+  */
+const parseMusic = (music_string) => {
+  const note_map = {'o': 4, 'o|': 2, '.|': 1};
+  return music_string.split(' ').filter(x => x != '').map(x => note_map[x]);
+}
+```
+
+# Instruction
+
+Explain the algorithm in natural language:
+- Describe the core idea and step-by-step approach
+- Specify inputs/outputs and edge cases
+- Provide time/space complexity
+
+Constraints:
+- Output must be plain text only
+- Do NOT output any code
+- Write your explanation to `solution/explanation.txt`
+
+# Prompt
+
+/* Input to this function is a string representing musical notes in a special ASCII format.
+  Your task is to parse this string and return list of integers corresponding to how many beats does each
+  not last.
+
+  Here is a legend:
+  'o' - whole note, lasts four beats
+  'o|' - half note, lasts two beats
+  '.|' - quater note, lasts one beat
+
+  >>> parseMusic('o o| .| o| o| .| .| .| .| o o')
+  [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]
+  */
+const parseMusic = (music_string) => {
+
+
+# Instructions
+
+- Write the explanation to `solution/explanation.txt`.
+- Do not modify tests.

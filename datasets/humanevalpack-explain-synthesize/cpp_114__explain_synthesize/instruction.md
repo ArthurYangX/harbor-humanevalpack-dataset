@@ -1,0 +1,29 @@
+# Context
+
+You are given a natural-language explanation of a function.
+
+Placeholder explanation for oracle/dataset generation. Implement the function described by the unit tests and the prompt.
+
+# Instruction
+
+Write a correct implementation in cpp that matches the explanation and passes the unit tests.
+
+# Prompt
+
+/*
+Given a vector of integers nums, find the minimum sum of any non-empty sub-vector
+of nums.
+Example
+minSubArraySum({2, 3, 4, 1, 2, 4}) == 1
+minSubArraySum({-1, -2, -3}) == -6
+*/
+#include<stdio.h>
+#include<vector>
+using namespace std;
+long long minSubArraySum(vector<long long> nums){
+
+
+# Instructions
+
+Please write your solution in the file `solution/solution.cpp`.
+Ensure your code is self-contained and runs correctly.

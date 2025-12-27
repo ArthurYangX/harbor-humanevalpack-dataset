@@ -1,0 +1,40 @@
+package main
+
+import (
+    "testing"
+    "github.com/stretchr/testify/assert"
+)
+
+
+// Prompt
+// You are given 2 words. You need to return true if the second word or any of its rotations is a substring in the first word
+// CycpatternCheck("abcd","abd") => false
+// CycpatternCheck("hello","ell") => true
+// CycpatternCheck("whassup","psus") => false
+// CycpatternCheck("abab","baa") => true
+// CycpatternCheck("efef","eeff") => false
+// CycpatternCheck("himenss","simen") => true
+func CycpatternCheck(a , b string) bool {
+// Solution
+l := len(b)
+    pat := b + b
+    for i := 0;i < len(a) - l + 1; i++ {
+        for j := 0;j<l + 1;j++ {
+            if a[i:i+l] == pat[j:j+l] {
+                return true
+            }
+        }
+    }
+    return false
+}
+
+// Test Code
+func TestCycpatternCheck(t *testing.T) {
+    assert := assert.New(t)
+    assert.Equal(false, CycpatternCheck("xyzw", "xyw"))
+    assert.Equal(true, CycpatternCheck("yello", "ell"))
+    assert.Equal(false, CycpatternCheck("whattup", "ptut"))
+    assert.Equal(true, CycpatternCheck("efef", "fee"))
+    assert.Equal(false, CycpatternCheck("abab", "aabb"))
+    assert.Equal(true, CycpatternCheck("winemtt", "tinem"))
+}
