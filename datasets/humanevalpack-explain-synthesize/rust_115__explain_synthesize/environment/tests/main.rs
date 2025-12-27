@@ -1,0 +1,71 @@
+#![allow(unused)]
+use std::collections::*;
+use std::cmp::*;
+use std::io::*;
+use std::str::*;
+use std::any::Any;
+use std::mem::replace;
+use rand::prelude::*;
+use regex::Regex;
+use md5;
+
+
+// Solution Code
+/*
+    You are given a rectangular grid of wells. Each row represents a single well,
+    and each 1 in a row represents a single unit of water.
+    Each well has a corresponding bucket that can be used to extract water from it, 
+    and all buckets have the same capacity.
+    Your task is to use the buckets to empty the wells.
+    Output the number of times you need to lower the buckets.
+*/
+fn max_fill(grid:Vec<Vec<i32>>, capacity:i32) -> i32{let mut out: i32 = 0;
+
+    for i in 0..grid.len() {
+        let mut sum: i32 = 0;
+
+        for j in 0..grid[i].len() {
+            sum += grid[i][j];
+        }
+        if sum > 0 {
+            out += (sum - 1) / capacity + 1;
+        }
+    }
+    return out;
+}
+
+// Test Code
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_max_fill() {
+        assert!(
+            max_fill(
+                vec![vec![0, 0, 1, 0], vec![0, 1, 0, 0], vec![1, 1, 1, 1]],
+                1
+            ) == 6
+        );
+        assert!(
+            max_fill(
+                vec![
+                    vec![0, 0, 1, 1],
+                    vec![0, 0, 0, 0],
+                    vec![1, 1, 1, 1],
+                    vec![0, 1, 1, 1]
+                ],
+                2
+            ) == 5
+        );
+        assert!(max_fill(vec![vec![0, 0, 0], vec![0, 0, 0]], 5) == 0);
+        assert!(max_fill(vec![vec![1, 1, 1, 1], vec![1, 1, 1, 1]], 2) == 4);
+        assert!(max_fill(vec![vec![1, 1, 1, 1], vec![1, 1, 1, 1]], 9) == 2);
+    }
+
+}
+
+
+// Binary entry point (required for cargo test)
+fn main() {}
